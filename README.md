@@ -6,7 +6,8 @@ A simple but capable AM transmitter for the Raspbery Pi pico!
 ## Disclaimer!!
 
 The Pi is not able to output enough power to disrupt anything significantly, but with a long enough antenna, will get you in 
-trouble and annoy othere. Please use this only for experimental purposes and do NOT use this in a way which might cause any disruption!
+trouble and annoy othere. Please use this only for experimental and educational purposes and do NOT use this in a way which might 
+cause any disruption!
 
 My antenna for this is barely large enough for half of my room to have reception. Please don't go much further than that!
 
