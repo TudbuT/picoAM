@@ -2,6 +2,7 @@
 A simple but capable AM transmitter for the Raspbery Pi pico!
 
 ![Image of assembled circuit](https://media.discordapp.net/attachments/1077080199847489626/1102196399577247774/20230430_133433.jpg)
+(image deviates slightly from current version of the circuit, apologies!)
 
 ## Disclaimer!!
 
