@@ -5,8 +5,6 @@
 
 
 #include "RP2040_PWM.h"
-#include "hardware/pll.h"
-#include "hardware/clocks.h"
 
 //////////////////////////////////// begin clock code
 #include "hardware/pll.h"
