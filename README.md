@@ -10,6 +10,9 @@ trouble and annoy othere. Please use this only for experimental purposes and do 
 
 My antenna for this is barely large enough for half of my room to have reception. Please don't go much further than that!
 
+**Also**, this project will overclock your pi. However, 200MHz is fine for 99.9% of picos and is SUPER unlikely to damage it unless you
+leave it running for a very long time (days or something in a closed environment).
+
 ## How it works
 
 The Pi generates a 1557kHz PWM signal, which will be the carrier wave. The frequency is not changed, only the pulse width.
