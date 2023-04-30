@@ -102,9 +102,8 @@ void setup() {
 //float m = 0;
 
 void loop() {
-  float v = ((float) analogRead(26) / 4096.0 * 7 * 100.0); 
+  float v = ((float) analogRead(26) / 4096.0 * 6 * 100.0 + 10); 
   pwm->setPWM_DCPercentage_manual(15, v);
-  v *= 2;
   led->setPWM_DCPercentage_manual(LED_BUILTIN, v);
   //n = n + 1;
   //if(m < v) { m = v; }
@@ -115,6 +114,3 @@ void loop() {
     //m = 0;
   //}
 }
-
-
-
