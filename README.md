@@ -39,21 +39,18 @@ AM signal on pin 15.
 
 ## Circuit Diagram and explanation
 
-![Image of circuit diagram](https://media.discordapp.net/attachments/1077080199847489626/1102203487363792956/SmartSelect_20230430_140248_Flexcil.jpg)
+![Image of circuit diagram](https://user-images.githubusercontent.com/48156391/235515258-df6d10fa-90f5-4997-813d-1cf969dbf8a0.png)
 
 The part which prepares the audio for the pico is not strictly needed, but if you use line inputs, you reeeally should have it.
 It has the following jobs:
-- R2 and R3 try to pull AI- a between the two voltages to be able to record the whole signal in case it is not a grounded one (not needed,
-  it can also just be connected to ground. this is basically just extra fanciness with nonzero but very small benefit.)
-- R1 makes sure there isn't too much strain put on the input
 - D1 and D2 clamp the signal to acceptable voltages
 - **An extra resistor of about 50-100 ohms may be added from the AI+ point to the AI- point to load the signal.** This is optional, but
   *can* clean up a little bit of noise if you have long cables.
 
 **ERRATA :warning:**<br>
 If you aren't an asshole, ***PLEASE*** add the low pass filter as mentioned in the Disclaimer:
-- Add a 100ohm resistor between pico and antenna
-- Wire a 2nF (2000pF) capacitor between the new start of the antenna and ground
+- Add the 100ohm resistor (R3 in new schematic) between pico and antenna
+- Wire a 2nF (2000pF) capacitor (C1 in new schematic) between the new start of the antenna and ground
 
 ## How to use it
 
