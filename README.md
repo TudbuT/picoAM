@@ -44,7 +44,7 @@ AM signal on pin 15.
 The part which prepares the audio for the pico is not strictly needed, but if you use line inputs, you reeeally should have it.
 It has the following jobs:
 - D1 and D2 clamp the signal to acceptable voltages
-- **An extra resistor of about 50-100 ohms may be added from the AI+ point to the AI- point to load the signal.** This is optional, but
+- **An extra resistor of about 50-400 ohms may be added from the AI+ point to the AI- point to load the signal.** This is optional, but
   *can* clean up a little bit of noise if you have long cables.
 
 **ERRATA :warning:**<br>
