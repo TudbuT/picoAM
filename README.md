@@ -15,6 +15,19 @@ My antenna for this is barely large enough for half of my room to have reception
 **Also**, this project will overclock your pi. However, 200MHz is fine for 99.9% of picos and is SUPER unlikely to damage it unless you
 leave it running for a very long time (days or something in a closed environment).
 
+### Most important disclaimer
+
+Legal restrictions likely aren't enough for some people to not do this. Including me actually (tho minisenders with low power like
+this are actually allowed where i live, but they have to be certified). However, there is one **EXTREMELY** importatnt thing to add:
+
+This uses square waves, so there are GOING to be harmonics. One of those is near 99.6MHz, in the FM band. You will hear the sender there 
+as well in some cases as FM receivers *can usually* receive AM, its just gonna be really noisy. Your neighbors, sadly, might also hear it
+there, as 99MHz FM is is in the FM radio bands. MAKE SURE YOUR ANTENNA IS SMALL!!!
+
+There is also a MUCH STRONGER harmonic at ~155.726MHz FM, in the 2m amateur radio band. PLEASE, PLEASE, PLEASE don't use a large 
+enough antenna for it to be able to send that very far. And this signal will actually reach FURTHER than the AM one because it 
+is a shorter wavelength and therefore sends better using a short antenna. ***__PLEASE add the low pass filter I described.__***
+
 ## How it works
 
 The Pi generates a 1557kHz PWM signal, which will be the carrier wave. The frequency is not changed, only the pulse width.
@@ -36,6 +49,11 @@ It has the following jobs:
 - D1 and D2 clamp the signal to acceptable voltages
 - **An extra resistor of about 50-100 ohms may be added from the AI+ point to the AI- point to load the signal.** This is optional, but
   *can* clean up a little bit of noise if you have long cables.
+
+**ERRATA :warning:**<br>
+If you aren't an asshole, ***PLEASE*** add the low pass filter as mentioned in the Disclaimer:
+- Add a 100ohm resistor between pico and antenna
+- Wire a 2nF (2000pF) capacitor between the new start of the antenna and ground
 
 ## How to use it
 
