@@ -93,9 +93,9 @@ void setup() {
   PWM_Level = 65535;
   // setPWM_manual(uint8_t pin, uint16_t top, uint8_t div, uint16_t level, bool phaseCorrect = false)
   led->setPWM_manual(LED_BUILTIN, PWM_TOP, PWM_DIV, PWM_Level, false);
+  delay(200);
   Serial.println(pwm->get_freq_CPU());
   Serial.println(pwm->getActualFreq());
-  delay(200);
 }
 
 //long n = 0;
