@@ -68,3 +68,9 @@ If you aren't an asshole, ***PLEASE*** add the low pass filter as mentioned in t
 
 I am currently doing DIY small-scale production of PCBs for this project. Costs per 4 PCBs is around 3€ + labor, and I'm selling them for 
 1€ + shipping each (email me: pcb@mail.tudbut.de). The gerber and KiCad files will be uploaded here shortly as well if you want to make your own.
+
+![first prototype](https://github.com/TudbuT/picoAM/assets/48156391/777238d4-18bf-4856-8728-9882879e48a9)
+This is the first prototype. It was made using the Toner Transfer Method, but all future PCBs will be made using the professional dry film method,
+so they will look much better. TTM is much cheaper however, and I will make you a PCB with it for 70 cents + shipping.
+
+Image of a PCB made using the photographic process to follow. 
