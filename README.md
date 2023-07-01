@@ -63,3 +63,8 @@ If you aren't an asshole, ***PLEASE*** add the low pass filter as mentioned in t
 - Connect the Pi to your PC using the USB port for power
 - Connect the audio input to your PC
 - Tune in to 1557kHz AM
+
+## PCBs
+
+I am currently doing DIY small-scale production of PCBs for this project. Costs per 4 PCBs is around 3€ + labor, and I'm selling them for 
+1€ + shipping each (email me: pcb@mail.tudbut.de). The gerber and KiCad files will be uploaded here shortly as well if you want to make your own.
