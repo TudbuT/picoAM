@@ -73,7 +73,9 @@ I am currently doing DIY small-scale production of PCBs for this project. Costs 
 
 ![first prototype](https://github.com/TudbuT/picoAM/assets/48156391/777238d4-18bf-4856-8728-9882879e48a9)
 This is the first prototype. It was made using the Toner Transfer Method, but all future PCBs will be made using the professional dry film method,
-so they will look much better. TTM is much cheaper however, and I will make you a PCB with it for 70 cents + shipping.
+so they will look much better. TTM is much cheaper however, and I will make you a PCB with it for 80 cents + shipping.
 
 Image of a PCB made using the photographic process (not yet populated):
 ![second prototype](https://github.com/TudbuT/picoAM/assets/48156391/52075eeb-c9e0-4b73-842b-776b8e0631c0)
+
+If you want a fully assembled one, add 9€ to the price (5€ for the pico, and the rest is mostly soldering labor and the cables)
