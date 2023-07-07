@@ -28,7 +28,7 @@ there, as 99MHz FM is is in the FM radio bands. MAKE SURE YOUR ANTENNA IS SMALL!
 
 There is also a MUCH STRONGER harmonic at ~155.726MHz FM, in the 2m amateur radio band. PLEASE, PLEASE, PLEASE don't use a large 
 enough antenna for it to be able to send that very far. And this signal will actually reach FURTHER than the AM one because it 
-is a shorter wavelength and therefore sends better using a short antenna. ***__PLEASE add the low pass filter I described.__***
+is a shorter wavelength and therefore sends better using a short antenna. ***__If you want to use a longer antenna, PLEASE add the low pass filter I described, it fixes the noise enough for big antennas to be fine.__***
 
 ## How it works
 
@@ -49,7 +49,7 @@ It has the following jobs:
 - **An extra resistor of about 50-400 ohms may be added from the AI+ point to the AI- point to load the signal.** This is optional, but
   *can* clean up a little bit of noise if you have long cables.
 
-**ERRATA :warning:**<br>
+**IMPORTANT :warning:**<br>
 If you aren't an asshole, ***PLEASE*** add the low pass filter as mentioned in the Disclaimer:
 - Add the 100ohm resistor (R3 in new schematic) between pico and antenna
 - Wire a 2nF (2000pF) capacitor (C1 in new schematic) between the new start of the antenna and ground
