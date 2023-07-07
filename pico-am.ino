@@ -1,8 +1,9 @@
 // You will need to install RP2040_PWM in the Arduino IDE first!
+// RP2040_PWM is incompatible with Arduino Mbed OS RP2040 at >v4. Use 3.x!
 
 
 #define F_CPU 204000000
-
+//#define ENABLE_SERIAL
 
 #include "RP2040_PWM.h"
 
@@ -77,7 +78,10 @@ RP2040_PWM* pwm;
 RP2040_PWM* led;
 
 void setup() {
+  #ifdef ENABLE_SERIAL
   Serial.begin(9600);
+  #endif
+  analogReadResolution(12);
   set_sys_clock_khz(204000, true);
   pwm = new RP2040_PWM(15, 1557000, 0);
   pwm->enablePWM();
@@ -93,24 +97,30 @@ void setup() {
   PWM_Level = 65535;
   // setPWM_manual(uint8_t pin, uint16_t top, uint8_t div, uint16_t level, bool phaseCorrect = false)
   led->setPWM_manual(LED_BUILTIN, PWM_TOP, PWM_DIV, PWM_Level, false);
-  delay(200);
   Serial.println(pwm->get_freq_CPU());
   Serial.println(pwm->getActualFreq());
+  delay(200);
 }
 
-//long n = 0;
-//float m = 0;
+long t = millis();
+long n = 0;
+float m = 0;
 
 void loop() {
-  float v = ((float) analogRead(26) / 4096.0 * 6 * 100.0 + 10); 
+  float v = ((float) analogRead(26) / 4096.0 * 200.0 + 10); 
   pwm->setPWM_DCPercentage_manual(15, v);
   led->setPWM_DCPercentage_manual(LED_BUILTIN, v);
-  //n = n + 1;
-  //if(m < v) { m = v; }
-  //if(n % 100000 == 0) {
-    //Serial.print(n);
-    //Serial.println(": ");
-    //Serial.println(m);
-    //m = 0;
-  //}
+  #ifdef ENABLE_SERIAL
+  n = n + 1;
+  if(m < v) { m = v; }
+  if(n % 100000 == 0) {
+    Serial.print((float) n / (((float)(millis() - t)) / 1000) / 1000);
+    Serial.print("kHz (max=");
+    Serial.print(m);
+    Serial.println(")");
+    t = millis();
+    n = 0;
+    m = 0;
+  }
+  #endif
 }
